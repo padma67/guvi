@@ -1,4 +1,4 @@
-#To print all odd numbers between 1 to 100
+#To print all even numbers between 1 to 100
 
 def Even():
     #declare the list for collect even numbers
