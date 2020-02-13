@@ -1,21 +1,32 @@
 #Calculator
 
 #get the input value from user
-a=int(input("Enter the first value:"))
-b=int(input("Enter the second value:"))
-print("Addiion-1","Subtraction-2","Division-3","Modulas-4","Multiplication-5","Exponenial-6")
-#get the function operator from user
-c=int(input("Enter your choice:"))
+num1=float(input("Enter the number 1:"))
+num2=float(input("Enter the number 2:"))
+print("1.Add")
+print("2.Sub")
+print("3.Div")
+print("4.Mod")
+print("5.Mul")
+print("6.Expo")
+#get the function operator from uuer
+ch=float(input("Enter your choice:"))
+c=round(ch)
 if(c==1):
-    print("Addition of given inputs:",a+b)
-if(c==2):
-    print("subtraction of given inputs:",a-b)
-if(c==3):
-    print("Division of given inputs:",a/b)
-if(c==4):
-    print("Modulas of given inputs:",a%b)
-if(c==5):
-    print("Multiplication of given inputs:",a*b)
-if(c==6):
-    print("exponential of given inputs:",a**b)
+    print("The output of ",num1,"and",num2,"is",num1+num2)
+elif(c==2):
+    print("The output of ",num1,"and",num2,"is",num1-num2)
+elif(c==3):
+      if(num2==0):
+          print("The output of ",num1,"and",num2,"is Infinity")
+      else:
+          print("The output of ",num1,"and",num2,"is",num1/num2)
+elif(c==4):
+    print("The output of ",num1,"and",num2,"is",num1%num2)
+elif(c==5):
+    print("The output of ",num1,"and",num2,"is",num1*num2)
+elif(c==6):
+    print("The output of ",num1,"and",num2,"is",num1**num2)
+else:
+    print("Invalid choice")
 
