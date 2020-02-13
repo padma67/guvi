@@ -7,5 +7,5 @@ odd=[]
 for i in range(1,n):
     if(i%2!=0):
         odd.append(i)
-print("odd numbers between 1 to n",odd)
+print("odd number between 1 to n",odd)
       
