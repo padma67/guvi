@@ -14,11 +14,16 @@ for i in range(0,len1):
     if(a%2==0):
         even.append(a)
         sume=sume+a
+        
     else:
         odd.append(a)
         sumo=sumo+a
+sumev.append(sume)
+sumd.append(sumo)
 print("All Numbers List:",al)
 print("Odd Number List:",odd)
 print("Even Number List:",even)
 print("Sum of even numbers",sume)
-print("Sm of odd nubers",sumo)
+print("Sum of odd nubers",sumo)
+print("sum of even numbers in list",sumev)
+print("sum of odd numbers in list",sumd)
