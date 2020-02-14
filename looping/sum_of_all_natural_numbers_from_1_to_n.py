@@ -9,4 +9,5 @@ def Natural():
         sum=sum+i
         i=i+1
     print("sum of all Natural numbers between 1 to n is {0}".format(sum))
+return sum
 Natural()
