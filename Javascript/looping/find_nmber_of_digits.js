@@ -1,4 +1,4 @@
-var n=prompt;
+var n=prompt();
 var d=0;
 var count=0;
 while(n>0)
