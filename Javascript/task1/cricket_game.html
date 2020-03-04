@@ -1,0 +1,155 @@
+<html>
+<head>
+<title>cricket</title>
+</head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 500px; 
+}
+.but {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 100px;
+}
+* {
+  box-sizing: border-box;
+}
+
+
+</style>
+<script src="cricket1.js">
+</script>
+
+</head>
+
+<body >
+<div >
+  <div " class="column"><h1 align="center">TEAM 1</h1><br><br>
+  <TABLE style="border:5px">
+  <tr>
+    <td><h2>run value</h2></td>
+    <td><h2>:<input type="text" style="text-align:right" id="run" value="0"></h2></td></tr>
+    <td><h2>PLAYER</h2></td>
+    <td><h2>:<input type="text" style="text-align:right" id="p1" value="0"></h2></td></tr>
+    <td><h2>REM BALL</h2></td>
+    <td><h2>:<input type="text" style="text-align:right" id="b1" value="36"></h2></td></tr>
+    <td><h2>WICKET</h2></td>
+    <td><h2>:<input type="text" style="text-align:right" id="w1" value="0"></h2></td></tr>
+    <td><h2>SCORE</h2></td>
+    <td><h2>:<input type="text" style="text-align:right" id="s1" value="0"></h2></td></tr>
+   
+</TABLE>
+<h1 style="text-align:center"><input type="button" id="bt2" value="play"  onClick="play1()"></h1>
+  </div>
+  <div class="column"><h1 align="center">TEAM 2</h1><br><br>
+<TABLE>
+  <tr>
+    <td><h2>RUN</h2></td>
+    <td><h2>:<input type="text" style="text-align:right" id="r2" value="0"></h2></td></tr>
+    <td><h2>PLAYER</h2></td>
+    <td><h2>:<input type="text" style="text-align:right" id="p2" value="0"></h2></td></tr>
+    <td><h2>REM BALL</h2></td>
+    <td><h2>:<input type="text" style="text-align:right" id="b2" value="36"></h2></td></tr>
+    <td><h2>WICKET</h2></td>
+    <td><h2>:<input type="text" style="text-align:right" id="w2" value="0"></h2></td></tr>
+    <td><h2>SCORE</h2></td>
+    <td><h2>:<input type="text" style="text-align:right" id="s2" value="0"></h2></td></tr>
+</TABLE>
+<h1 style="text-align:center"><input type="button" id="bt1" value="play" onClick="play2()"></h1>
+</div>
+ <br><br>
+<div><h1 align="center"><a href="result.html"> submit</a></h1></div>
+
+</body>
+</html>
+
+//js file
+let s=[],w=[],b=[],o=[],score1=0,score2=0,p=[1,1];
+w=[0,0];b=[36,36];o=[0,0];p=[1,1];
+function play1(){
+    if(w[0]>=10 || b[0]<=0){
+        localStorage.setItem("Score1",score1);
+        alert("Game Over");
+        return 0;
+    }
+    o[0]+=1;
+    let runn= Math.floor(Math.random() * 7);
+    document.getElementById("run").value=runn;
+    score1+=parseInt(runn);
+    document.getElementById("s1").value=score1;
+    document.getElementById("p1").value=p[0];
+    if(runn==0){w[0]+=1;}
+    document.getElementById("w1").value=w[0];
+    let bl1=document.getElementById("b1").value;
+    b[0]=parseInt(bl1)-1;
+    document.getElementById("b1").value=b[0];
+    if(o[0]==6 || r==0){o[0]=0;p[0]+=1;}
+    
+}
+function play2(){
+    if(w[1]>=10 || b[1]<=0){
+        localStorage.setItem("Score2",score2);
+        alert("Game Over");
+        return 0;
+    }
+    o[1]+=1;
+    let r= Math.floor(Math.random() * 7);
+    document.getElementById("r2").value=r;
+    score2+=parseInt(r);
+    document.getElementById("s2").value=score2;
+    document.getElementById("p2").value=p[1];
+    if(r==0){w[1]+=1;}
+    document.getElementById("w2").value=w[1];
+    let bl1=document.getElementById("b2").value;
+    b[1]=parseInt(bl1)-1;
+    document.getElementById("b2").value=b[1];
+    if(o[1]==6 || r==0){o[1]=0;p[1]+=1;}
+    
+}
+
+//html result 
+
+<HTML>
+<head>
+<title>www.cricket/result.com</title>
+<script>
+function act(){
+let score1=localStorage.getItem("Score1");
+let score2=localStorage.getItem("Score2");
+let x=parseInt(score1);
+let y=parseInt(score2);
+if(x>y){let s=x-y;alert("TEAM A WON BY "+s+" RUNS");
+    document.getElementById("res").style="background-color:LightPink;";
+    document.getElementById("t").innerHTML="<h1>TEAM A WON BY </h1>" +"<h1>"+s+"</h1>"+"<h1> RUNS</h1>";
+}
+else if(x<y){let s=y-x;alert("TEAM B WON BY "+s+" RUNS");
+    document.getElementById("res").style="background-color:Cyan;";
+    document.getElementById("t").innerHTML ="<h1>TEAM B WON BY </h1>" +"<h1>"+s+"</h1>"+"<h1> RUNS</h1>";
+}
+else{alert("DRAW");
+    document.getElementById("res").style="background-color:Blue;";
+    document.getElementById("t").innerHTML = "<h1>DRAW</h1>";
+}}
+</script>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 100%;
+  padding: 10px;
+  height: 200px;
+  text-align: center; 
+}
+</style>
+
