@@ -1,113 +1,54 @@
-<html>
+<!DOCTYPE html>
 <head>
-<title>cricket</title>
+<title>Cricket team player</title>
 </head>
 <style>
-* {
-  box-sizing: border-box;
-}
-
-.column {
-  float: left;
-  width: 50%;
-  padding: 10px;
-  height: 500px; 
-}
-.but {
-  float: left;
-  width: 50%;
-  padding: 10px;
-  height: 100px;
-}
-* {
-  box-sizing: border-box;
-}
-
-
-</style>
-<script src="cricket1.js">
-</script>
-
-</head>
-
-<body >
-<div >
-  <div " class="column"><h1 align="center">TEAM 1</h1><br><br>
-  <TABLE style="border:5px">
-  <tr>
-    <td><h2>run value</h2></td>
-    <td><h2>:<input type="text" style="text-align:right" id="run" value="0"></h2></td></tr>
-    <td><h2>PLAYER</h2></td>
-    <td><h2>:<input type="text" style="text-align:right" id="p1" value="0"></h2></td></tr>
-    <td><h2>REM BALL</h2></td>
-    <td><h2>:<input type="text" style="text-align:right" id="b1" value="36"></h2></td></tr>
-    <td><h2>WICKET</h2></td>
-    <td><h2>:<input type="text" style="text-align:right" id="w1" value="0"></h2></td></tr>
-    <td><h2>SCORE</h2></td>
-    <td><h2>:<input type="text" style="text-align:right" id="s1" value="0"></h2></td></tr>
-   
-</TABLE>
-<h1 style="text-align:center"><input type="button" id="bt2" value="play"  onClick="play1()"></h1>
-  </div>
-  <div class="column"><h1 align="center">TEAM 2</h1><br><br>
-<TABLE>
-  <tr>
-    <td><h2>RUN</h2></td>
-    <td><h2>:<input type="text" style="text-align:right" id="r2" value="0"></h2></td></tr>
-    <td><h2>PLAYER</h2></td>
-    <td><h2>:<input type="text" style="text-align:right" id="p2" value="0"></h2></td></tr>
-    <td><h2>REM BALL</h2></td>
-    <td><h2>:<input type="text" style="text-align:right" id="b2" value="36"></h2></td></tr>
-    <td><h2>WICKET</h2></td>
-    <td><h2>:<input type="text" style="text-align:right" id="w2" value="0"></h2></td></tr>
-    <td><h2>SCORE</h2></td>
-    <td><h2>:<input type="text" style="text-align:right" id="s2" value="0"></h2></td></tr>
-</TABLE>
-<h1 style="text-align:center"><input type="button" id="bt1" value="play" onClick="play2()"></h1>
-</div>
- <br><br>
-<div><h1 align="center"><a href="result.html"> submit</a></h1></div>
+    .flex-container {
+      display: flex;
+      flex-wrap: nowrap;
+      
+    }
+    
+    .flex-container > div {
+      background-color:#f1f1f1;
+      width: 333px;
+      margin: 10px;
+      text-align: center;
+      line-height: 75px;
+      font-size: 30px;
+    }
+    #demo{
+      color:red;
+    }
+    </style>
+<body>
+    <script src="cricket.js"></script>
+    <div class="flex-container">
+        <div>
+           <h1>Team 1</h1>
+            <button type="button"onclick="obj1.firstteam()">Play</button>
+            <p id="de"></p>
+           
+            <p id="d"></p>
+           
+            
+        </div>
+        <div>
+            <h1>Team 2</h1>
+            <button type="button" onclick="obj2.secondteam()" >Play</button>
+            <p id="demo1"></p>
+            <p id="alert2"></p>
+            <section>
+                <p id="over2">over</p>
+                <p id="Run2">Run</p>
+                <p id="Ball2">ball</p>
+            </section>
+        </div>
+    </div>
 
 </body>
 </html>
 
 
 
-//html result 
-
-<HTML>
-<head>
-<title>www.cricket/result.com</title>
-<script>
-function act(){
-let score1=localStorage.getItem("Score1");
-let score2=localStorage.getItem("Score2");
-let x=parseInt(score1);
-let y=parseInt(score2);
-if(x>y){let s=x-y;alert("TEAM A WON BY "+s+" RUNS");
-    document.getElementById("res").style="background-color:LightPink;";
-    document.getElementById("t").innerHTML="<h1>TEAM A WON BY </h1>" +"<h1>"+s+"</h1>"+"<h1> RUNS</h1>";
-}
-else if(x<y){let s=y-x;alert("TEAM B WON BY "+s+" RUNS");
-    document.getElementById("res").style="background-color:Cyan;";
-    document.getElementById("t").innerHTML ="<h1>TEAM B WON BY </h1>" +"<h1>"+s+"</h1>"+"<h1> RUNS</h1>";
-}
-else{alert("DRAW");
-    document.getElementById("res").style="background-color:Blue;";
-    document.getElementById("t").innerHTML = "<h1>DRAW</h1>";
-}}
-</script>
-<style>
-* {
-  box-sizing: border-box;
-}
-
-.column {
-  float: left;
-  width: 100%;
-  padding: 10px;
-  height: 200px;
-  text-align: center; 
-}
-</style>
 
