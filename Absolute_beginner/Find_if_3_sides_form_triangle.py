@@ -8,6 +8,5 @@ def triangle():
 	print(y)
 	else: 
     	print(n)
-res=triangle()
-print(res)
+triangle()
     
