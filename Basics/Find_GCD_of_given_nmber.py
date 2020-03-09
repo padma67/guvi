@@ -8,6 +8,7 @@ def GCD():
         if(N % i == 0 and M % i == 0):
             gcd = i
         i = i + 1
+    return gcd
     
 res=GCD()
 print(res)
