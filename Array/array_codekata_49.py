@@ -3,10 +3,13 @@
 def max():
 	N=int(input())
 	num1=list(map(int,input().split()))
+	#sort aray by inbuild function
 	m=sorted(num1)
+	#reverse the sorted array 
 	a=m[::-1]
 	s=[]
 	v=[]
+	#by using for loop append the maximum and minimum number alternatively to array
 	for i in range(N):
 		s.append(a[i])
 		s.append(m[i])
