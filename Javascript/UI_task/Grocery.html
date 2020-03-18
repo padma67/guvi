@@ -82,6 +82,7 @@ border-color:pink;
 </div>
 <script>
   var div=document.createElement("div");
+
 document.getElementById("a2").appendChild(div);
 div.style.position="relative";
 div.style.left="225px";
@@ -98,8 +99,19 @@ but.onclick=function()
 function myfunc(){
   var p=document.createElement("p");
   div.appendChild(p);
+  var b1=document.createElement("button");
+  b1.innerHTML="delete";
+  b1.onclick=function(){
+    del()
+  }
+  div.appendChild(b1);
   p.innerHTML=document.getElementById("inpfield").value;
   document.getElementById("inpfield").value="";
+
+function del(){
+  p.remove();
+  b1.remove();
+}
 }
 function clear(){
   div.innerHTML="";
