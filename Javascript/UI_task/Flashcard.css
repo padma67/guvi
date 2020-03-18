@@ -41,23 +41,3 @@
 	border-style:solid;
 	border-color: #ff9900;
 }
-#del
-{
-	background-color: blue;
-	position:relative;
-	top:22px;
-	left:45px;
-}
-#edi
-{
-	background-color: blue;
-	position:relative;
-	top:22px;
-}
-#next{
-	border-color: green;
-	width: 22%;
-	height:22px;
-	position: relative;
-	left:145px;
-}
