@@ -74,15 +74,22 @@ border-color:pink;
 <br><br><br>
 <div class="design" id="a2">
 <h2><center><font color="steelblue">Grocery Items</center></font></h2><br>
-<p id="res" class="text-line"></p>
-<button class="click" id="b2" >Clear items</button>
+<ul id="item"></ul>
+<button class="click" id="b2" onclick="clear()">Clear items</button>
 <br>
 </div>
 <script>
+
 function myfunc(){
-  var x=document.getElementById("inpfield").value;
-  document.getElementById("res").innerHTML=x;
+  var li=document.createElement("li");
+  document.getElementById("item").appendChild(li);
+  li.innerHTML=document.getElementById("inpfield").value;
+
 }
+function clear(){
+  li.remove();
+}
+
 </script>
 </body>
 </html>
