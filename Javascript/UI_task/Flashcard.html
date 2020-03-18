@@ -7,16 +7,14 @@
 
 function down()
 {    
-    var td=document.createElement("td");
+	var td=document.createElement("td");
     var div1=document.createElement("div");
     td.appendChild(div1);
     document.getElementById("arrange").appendChild(td);
-div1.position="sticky";
 div1.style.width="272px";
 div1.style.height="151px";
 div1.style.border="outset"
 div1.style.background="white";	
-div1.class="container-fluid";
 var p1=document.createElement("p");
 var p=document.createElement("p");
 
@@ -53,7 +51,7 @@ div1.appendChild(but1);
 		var an= document.getElementById("ans").value;
 		document.getElementById("ans").value="";
 		function getans(){
-	    p2.innerHTML=an;
+	p2.innerHTML=an;
 
 }
 function remove(){
@@ -69,7 +67,6 @@ function edit(){
 		edi()
 	}
 
-}
 function edi()
 {
 	var a=document.getElementById("q").value;
@@ -78,6 +75,8 @@ function edi()
 	p2.innerHTML=b;
 	document.getElementById("q").value="";
 	document.getElementById("ans").value="";
+	eb.remove();
+}
 }
 }
 
