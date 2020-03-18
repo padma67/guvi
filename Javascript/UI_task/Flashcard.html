@@ -7,12 +7,16 @@
 
 function down()
 {    
+    var td=document.createElement("td");
     var div1=document.createElement("div");
-document.body.appendChild(div1);
+    td.appendChild(div1);
+    document.getElementById("arrange").appendChild(td);
+div1.position="sticky";
 div1.style.width="272px";
 div1.style.height="151px";
 div1.style.border="outset"
 div1.style.background="white";	
+div1.class="container-fluid";
 var p1=document.createElement("p");
 var p=document.createElement("p");
 
@@ -45,19 +49,35 @@ div1.appendChild(but);
 div1.appendChild(but1);
 	
 		p.innerHTML=document.getElementById("q").value;
+		document.getElementById("q").value="";
+		var an= document.getElementById("ans").value;
+		document.getElementById("ans").value="";
 		function getans(){
-	p2.innerHTML=document.getElementById("ans").value;
+	    p2.innerHTML=an;
 
 }
 function remove(){
 	div1.remove();
 }
 function edit(){
-	p.innerHTML=document.getElementById("q").value;
-	function getans(){
-	p2.innerHTML=document.getElementById("ans").value;
+	document.getElementById("q").value=p.innerHTML;
+	document.getElementById("ans").value=an;
+	var eb=document.createElement("button");
+	eb.innerHTML="edit"
+	document.getElementById("ebut").appendChild(eb);
+	eb.onclick=function(){
+		edi()
+	}
 
 }
+function edi()
+{
+	var a=document.getElementById("q").value;
+	var b=document.getElementById("ans").value;
+	p.innerHTML=a;
+	p2.innerHTML=b;
+	document.getElementById("q").value="";
+	document.getElementById("ans").value="";
 }
 }
 
@@ -74,8 +94,13 @@ function edit(){
 	<h3>Answer</h3>
 	<p><textarea rows="5" cols="66" id="ans"></textarea></p>
 	<p><input type="button"  value="save" id="next" onclick="down()"></p>
+	<p id="ebut"></p>
 </div>
-<br>
+<table cellpadding="11">
+	<tr id="arrange">
+		
+	</tr>
+</table>
 
 </body>
 </html>
