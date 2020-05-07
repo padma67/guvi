@@ -1,5 +1,6 @@
 
 const fun1 = (array, callback) => {
+  Var count=0;
   for(var i=0;i<array.length;i++){
     if(callback(array[i]))
       {
