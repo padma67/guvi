@@ -6,6 +6,7 @@ const fun1 = (array, callback) => {
         return true
       }
   }
+  return false
 }
 const somefun =(value)=>value%2==1
 fun1([2,3,5,8,12], somefun) 
