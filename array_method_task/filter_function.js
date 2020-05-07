@@ -13,4 +13,4 @@ const filfun =(value)=>value%2==0
 fun1([2,3,5,8,12], filfun) 
 
 //output
-[2, 8, 12]
+//[2, 8, 12]
