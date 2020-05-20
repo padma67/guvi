@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+	var h=document.createElement("h1");
+	h.innerHTML="Generate 5 digit random number";
+	h.setAttribute("style","text-align:center");
+	h.style.color="brown";
+	document.body.appendChild(h);
+	var but=document.createElement("button");
+	but.innerHTML="click";
+	but.style.position="relative";
+	but.style.left="515px";
+	but.style.width="25%";
+	but.style.height="35px";
+	but.style.backgroundColor="skyblue";
+
+	document.body.appendChild(but);
+	but.setAttribute("onclick","myFunction()");
+	var p=document.createElement("p");
+	p.style.textIndent="615px";
+	p.style.fontSize="27px";
+	document.body.appendChild(p);
+
+function myFunction() {
+  
+  var arr=[];
+  for(var i=0;i<5;i++){
+  	var x = Math.floor((Math.random() * 9) + 1 );
+  	var count=0;
+  	arr.push(x);
+  	if (arr.length>1) {
+         for(var j=0;j<arr.length-1;j++){
+         	if(arr[i]==arr[j]){
+         		arr.pop();
+         		count+=1;
+         		break;
+         	}
+         }
+         if(count>0){
+         	i--;
+         }
+  		}
+  	}
+  	p.innerHTML=arr.join("");
+  }
+</script>
+
+</body>
+</html>
