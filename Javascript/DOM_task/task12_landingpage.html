@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+</head>
+<style type="text/css">
+	
+</style>
+<body>
+	<script type="text/javascript">
+
+	var div=document.createElement("div");
+	div.setAttribute("style","height:1115px");
+	div.style.width="95%";
+	div.style.fontFamily="sans-serif";
+	div.style.border="1px solid grey";
+	div.style.position="absolute";
+	div.style.left="35px";
+	div.style.top="0px";
+	div.style.boxShadow="1px  1px 10px 1px grey";
+	document.body.appendChild(div);
+
+
+	var d2=document.createElement("div");
+	d2.style.background ="linear-gradient(150deg,#53f 15%,#05d5ff 70%)";
+	d2.style.width="100%";
+	d2.style.height="645px";
+	d2.style.transform="skewY(-5deg)"
+	d2.style.transformOrigin="0";
+	d2.style.position="absolute";
+	d2.style.top="0px";
+	div.appendChild(d2);
+
+	var d1=document.createElement("div");
+	d1.style.width="100%";
+	d1.style.height="31px";
+	d1.style.border="1px solid grey";
+	d1.style.position="absolute";
+	d1.style.backgroundColor="#f2f2f2";
+	d1.style.top="0px";
+	div.appendChild(d1);
+
+	var t=document.createElement("input");
+	t.setAttribute("type","text");
+	t.setAttribute("placeholder","Search or enter the website name");
+	t.style.width="55%";
+	t.style.height="13px";
+	t.style.position="relative";
+	t.style.top="3px";
+	t.style.left="235px";
+	d1.appendChild(t);
+
+	var d=document.createElement("div");
+	d.style.width="17px";
+	d.style.height="17px";
+	d.style.borderRadius="27px";
+	d.style.position="absolute";
+	d.style.top="3px";
+	d1.appendChild(d);
+	d.style.backgroundColor="red";
+	var d=document.createElement("div");
+	d.style.width="17px";
+	d.style.height="17px";
+	d.style.borderRadius="27px";
+	d.style.position="absolute";
+	d.style.top="3px";
+	d.style.left="25px";
+	d1.appendChild(d);
+	d.style.backgroundColor="orange";
+	var d=document.createElement("div");
+	d.style.width="17px";
+	d.style.height="17px";
+	d.style.borderRadius="27px";
+	d.style.position="absolute";
+	d.style.top="3px";
+	d.style.left="51px";
+	d1.appendChild(d);
+	d.style.backgroundColor="lightgreen";
+
+	var nav=document.createElement("nav");
+		nav.style.width="90%";
+		nav.style.height="80px";
+		nav.style.position="absolute";
+		nav.style.top="45px";
+		div.appendChild(nav);
+		var ul=document.createElement("ul");
+		ul.style.position="relative";
+		ul.style.left="15px";
+		ul.style.color="white";
+		ul.style.fontFamily="sans-serif";
+		var l1=document.createElement("li");
+		l1.innerHTML="Home";
+		var l2=document.createElement("li");
+		l2.innerHTML="Features";
+		var l3=document.createElement("li");
+		l3.innerHTML="Reviews";
+		var l4=document.createElement("li");
+		l4.innerHTML="Pricing";
+		var l=document.createElement("li");
+		l.style.display="inline-block";
+		l.style.fontSize="35px";
+		l.innerHTML="Landing";
+
+		l1.style.display="inline-block";
+		l1.style.marginLeft="255px";
+		l2.style.display="inline-block";
+		l2.style.marginLeft="65px";
+		l3.style.display="inline-block";
+		l3.style.marginLeft="65px";
+		l4.style.display="inline-block";
+		l4.style.marginLeft="65px";
+		ul.appendChild(l);
+		ul.appendChild(l1);
+		ul.appendChild(l2);
+		ul.appendChild(l3);
+		ul.appendChild(l4);
+		nav.appendChild(ul);
+		var l5=document.createElement("li");
+		l5.innerHTML="FAQ";
+		l5.style.display="inline-block";
+		l5.style.marginLeft="65px";
+		ul.appendChild(l5);
+		var l6=document.createElement("li");
+		l6.innerHTML="Get Started";
+		l6.style.border="1px solid white";
+		l6.style.padding="18px";
+		l6.style.display="inline-block";
+		l6.style.marginLeft="65px";
+		ul.appendChild(l6);
+
+
+		var d3=document.createElement("div");
+		d3.style.position="absolute";
+		d3.style.width="40%";
+		d3.style.height="155px";
+		d3.style.left="55px";
+		div.appendChild(d3);
+		d3.style.top="125px";
+		var h1=document.createElement("p");
+		h1.innerHTML=" Fly makes you faster";
+		h1.style.color="white";
+		h1.style.wordSpacing="15px";
+		h1.style.letterSpacing="5px";
+		h1.style.fontSize="45px";
+		d3.appendChild(h1);
+
+		var p=document.createElement("p");
+		p.style.color="white";
+		p.style.lineHeight="35px";
+		p.style.fontSize="21px";
+		p.style.position="absolute";
+		p.style.top="145px";
+		p.innerHTML="New free template by ";
+		var a=document.createElement("a");
+		a.innerHTML="uicookies.com.";
+		a.style.textDecoration="none";
+		a.style.color="grey";
+		p.appendChild(a);
+		var a=document.createElement("a");
+		a.innerHTML="For more template visit the ";
+		a.style.textDecoration="none";
+		p.appendChild(a);
+		var a=document.createElement("a");
+		a.innerHTML="site";
+		a.style.textDecoration="none";
+		a.style.color="grey";
+		p.appendChild(a);
+		var a=document.createElement("a");
+		a.innerHTML="Lorem ipsum dolor sit amet,consecteur adipisicing elit.";
+		a.style.textDecoration="none";
+		p.appendChild(a);
+		d3.appendChild(p);
+
+		var but=document.createElement("div");
+		but.style.width="45%";
+		but.style.height="35px";
+		but.style.backgroundColor="green";
+		d3.appendChild(but);
+		but.style.position="relative";
+		but.style.top="85px";
+		but.style.borderRadius="11px";
+
+		var p=document.createElement("p");
+		p.style.color="white";
+		p.style.textAlign="center";
+		p.style.paddingTop="10px";
+		p.innerHTML="SEE PRICING";
+		but.appendChild(p);
+
+
+		var d5=document.createElement("div");
+		d5.style.width="41%";
+		d5.style.height="555px";
+		d5.style.position="absolute";
+		d5.style.left="625px";
+		d5.style.backgroundColor="white";
+		div.appendChild(d5);
+		d5.style.top="115px";
+
+		var p=document.createElement("p");
+		p.style.textAlign="center";
+		p.style.fontSize="31px";
+		p.innerHTML="Sign Up for Free";
+		d5.appendChild(p);
+
+		var input=document.createElement("input");
+		input.setAttribute("type","text");
+		d5.appendChild(input);
+        input.style.backgroundColor="#f2f2f2";
+        input.style.width="80%";
+        input.setAttribute("placeholder","Full name");
+        input.style.border="none";
+        input.style.height="39px";
+        input.style.paddingLeft="15px";
+        input.style.position="relative";
+        input.style.left="38px";
+        input.style.fontSize="17px";
+
+        var input=document.createElement("input");
+		input.setAttribute("type","text");
+		d5.appendChild(input);
+        input.style.backgroundColor="#f2f2f2";
+        input.style.width="80%";
+        input.setAttribute("placeholder","Email");
+        input.style.border="none";
+        input.style.height="39px";
+        input.style.paddingLeft="15px";
+        input.style.top="15px";
+        input.style.position="relative";
+        input.style.left="38px";
+        input.style.fontSize="17px";
+
+         var input=document.createElement("input");
+		input.setAttribute("type","text");
+		d5.appendChild(input);
+        input.style.backgroundColor="#f2f2f2";
+        input.style.width="80%";
+        input.setAttribute("placeholder","Email");
+        input.style.border="none";
+        input.style.height="39px";
+        input.style.paddingLeft="15px";
+        input.style.top="30px";
+        input.style.position="relative";
+        input.style.left="38px";
+        input.style.fontSize="17px";
+
+         var input=document.createElement("input");
+		input.setAttribute("type","text");
+		d5.appendChild(input);
+        input.style.backgroundColor="#f2f2f2";
+        input.style.width="80%";
+        input.setAttribute("placeholder","Type");
+        input.style.border="none";
+        input.style.height="39px";
+        input.style.paddingLeft="15px";
+        input.style.top="45px";
+        input.style.position="relative";
+        input.style.left="38px";
+        input.style.fontSize="17px";
+
+        var but=document.createElement("div");
+		but.style.width="55%";
+		but.style.height="45px";
+		but.style.backgroundColor="blue";
+		d5.appendChild(but);
+		but.style.position="relative";
+		but.style.top="85px";
+		but.style.left="95px";
+		but.style.borderRadius="25px";
+
+		var p=document.createElement("p");
+		p.style.color="white";
+		p.style.textAlign="center";
+		p.style.paddingTop="15px";
+		p.innerHTML="Register";
+		but.appendChild(p);
+
+		var p=document.createElement("p");
+		p.style.color="lightgrey";
+		p.style.textAlign="center";
+		p.innerHTML="FEATURES";
+		p.style.letterSpacing="5px";
+		p.style.position="relative";
+		p.style.top="725px";
+		div.appendChild(p);
+
+		var p=document.createElement("p");
+		p.style.color="grey";
+		p.style.textAlign="center";
+		p.style.fontSize="31px";
+		p.innerHTML="App Features";
+		p.style.position="relative";
+		p.style.top="725px";
+		div.appendChild(p);
+
+	</script>
+</body>
+</html>
