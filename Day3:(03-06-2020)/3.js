@@ -2,8 +2,9 @@
 //3.1. if the give number is even
   function even1(n,callback){
   	if(n%2==0){
-  		callback();
+          return callback();
   	}
+        else{ console.log("the number is not even")}
   }
   function even2(){
   	console.log("The given number is even")
@@ -19,12 +20,13 @@
          if(count==2){
          	callback()
          }
+         else{ console.log("the given number is not prime"}
 		}
   }
   function prime2(){
   	console.log("The given number is prime")
   }
-  prime1(4,prime2)
+  prime1(7,prime2)
   //3.3 if the give number is palindrome
   function palindrome1(n,callback){ 
   	var dum=n;
