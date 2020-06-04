@@ -17,7 +17,7 @@
          if(n%i===0){
          	count+=1;
          }}
-         if(count==2){
+         if(count==2){hi
          	callback()
          }
          else{ console.log("the given number is not prime"}
