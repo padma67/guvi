@@ -31,7 +31,7 @@ var prime=array.filter(function(n){var count=0;
          }
 		}});
 console.log(prime);
-//Return all the palindromes in an array
+//2.5Return all the palindromes in an array
 var array=["ben","kick","temo","abba"];
 //anonymous return palindrome in array 
 var palindrome=array.filter(function(n){ var s="";
@@ -53,15 +53,24 @@ var array2=[5,6,7,8,9];
 var median2=a.reduce(function(accumulator,currentvalue){return (accumulator+currentvalue)/array2.length});
 console.log(median2);
 
+//2.7 delete duplicate number in array
 var array=[3,5,6,7,6,3,9];
 var duplicate=function(){ for(var j=0;j<array.length;j++){
 	for(var i=j+1;i<array.length;i++){
 		if(array[j]==array[i]){
-			delete array[i]
+			array.splice(i,1);
 		}
 	}}
-	var na=array.filter(function(n){ if(n!=""){return n}})
-	return na
+	
+	return array
 }
 console.log(duplicate());
+
+//2.8 rottation of array k times
+var a=[1,2,3,4,5,6,7];
+var rotate=function(k){
+for(var j=1;j<=k;j++){
+  a.unshift(...a.splice(-1,1));
+} return a}
+console.log(rotate(3));
 
