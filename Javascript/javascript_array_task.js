@@ -65,7 +65,7 @@ Example
 dropRightWhile([1,2,3,4,5], (value, index, array) => value % 2 === 0) => [1, 3, 5] */
 function droprightwhile(arr){
 	var newarr=arr.filter(function(value,index,array){
-		return value%2==0;
+		if(value%2==0){ array.slice(index,1)}else{return value}
 	});
 	return newarr
 }
@@ -76,10 +76,10 @@ This method is like Array.prototype.findIndex except that it iterates over eleme
 Example
 findLastIndex([1,2,3,4,5], (value, index, array) => value % 2 === 0)=> 3 */
 function findindex(arr){
-	var ind=arr.findIndex(function(value,index,array){
-		return value%2==0;
+	var ind=arr.filter(function(value,index,array){
+		if(value%2==0){return index}
 	});
-	return ind
+	return ind[ind.length-1];
 }
 console.log(findindex([1,2,3,5,6,7]));
 
